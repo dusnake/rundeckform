@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logs-container {
+    width: 50%;
+    height: 300px;
+    overflow-y: auto;
+    background: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.log-entry {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.status.RUNNING { color: orange; }
+.status.SUCCESS { color: green; }
+.status.FAILED  { color: red; }
